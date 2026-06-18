@@ -1,0 +1,9 @@
+/usr/local/rasa_venv/lib/python3.8/site-packages/rasa/core/tracker_store.py:830: MovedIn20Warning: Deprecated API features detected! These feature(s) are not compatible with SQLAlchemy 2.0. To prevent incompatible upgrades prior to updating applications, ensure requirements files are pinned to "sqlalchemy<2.0". Set environment variable SQLALCHEMY_WARN_20=1 to show all deprecation warnings.  Set environment variable SQLALCHEMY_SILENCE_UBER_WARNING=1 to silence this message. (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+  Base: DeclarativeMeta = declarative_base()
+/usr/local/rasa_venv/lib/python3.8/site-packages/sklearn/utils/multiclass.py:14: DeprecationWarning: Please use `spmatrix` from the `scipy.sparse` namespace, the `scipy.sparse.base` namespace is deprecated.
+  from scipy.sparse.base import spmatrix
+2026-06-18 23:04:41 INFO     root  - Starting Rasa server on http://0.0.0.0:5005
+2026-06-18 23:04:42 INFO     rasa.core.processor  - Loading model models/20260618-224546-vibrato-story.tar.gz...
+[93m/usr/local/rasa_venv/lib/python3.8/site-packages/rasa/utils/train_utils.py:528: UserWarning: constrain_similarities is set to `False`. It is recommended to set it to `True` when using cross-entropy loss.
+  rasa.shared.utils.io.raise_warning(
+[0m2026-06-18 23:05:40 INFO     root  - Rasa server is up and running.

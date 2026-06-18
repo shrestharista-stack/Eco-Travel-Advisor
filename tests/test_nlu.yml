@@ -1,0 +1,98 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - greets
+    - good afternoon
+    - what's up
+    - howdy
+
+- intent: goodbye
+  examples: |
+    - catch you later
+    - I'm leaving now
+    - take care
+    - gotta go
+    - that's all for now
+
+- intent: affirmation
+  examples: |
+    - yeah that works
+    - yep
+    - I agree
+    - go ahead
+    - sounds great
+
+- intent: denial
+  examples: |
+    - not at all
+    - absolutely not
+    - I disagree
+    - that's wrong
+    - no I don't want that
+
+- intent: thank_you
+  examples: |
+    - I appreciate it
+    - thanks so much
+    - that was very helpful
+    - brilliant thanks
+    - cheers mate
+
+- intent: plan_a_trip
+  examples: |
+    - I would like to go somewhere nice
+    - can you arrange a holiday for me
+    - I want to travel somewhere
+    - help me find a vacation spot
+    - I'm thinking of going on holiday to Paris
+
+- intent: city_break
+  examples: |
+    - I fancy a short trip to a city
+    - weekend in a European capital
+    - a couple of days in a big city
+    - I want a quick urban getaway
+    - take me to a city for a few days
+
+- intent: eco_travel
+  examples: |
+    - green holiday in the countryside
+    - I want a sustainable nature experience
+    - take me on an eco-friendly adventure
+    - I prefer low impact travel in nature
+    - show me some eco tourism options
+
+- intent: business_trip
+  examples: |
+    - I need to travel for a meeting
+    - organise a work trip for me
+    - green corporate travel
+    - I have a conference to attend
+    - plan a low carbon work journey
+
+- intent: carbon_footprint
+  examples: |
+    - tell me about the emissions
+    - how green is my journey
+    - compare the CO2 for different transport
+    - what is the environmental cost
+    - show me the carbon comparison
+
+- intent: request_human_advisor
+  examples: |
+    - this is too complicated for a bot
+    - let me speak to someone real
+    - I want human assistance
+    - put me through to a person
+    - I need a real travel agent
+
+- intent: out_of_scope
+  examples: |
+    - what is your favourite colour
+    - can you help me with my homework
+    - order me a pizza
+    - who is the prime minister
+    - translate this to French

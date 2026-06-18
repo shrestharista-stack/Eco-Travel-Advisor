@@ -1,0 +1,96 @@
+version: "3.1"
+
+stories:
+
+  - story: city break happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: city_break
+      - action: utter_city_break_info
+      - action: trip_planning_form
+      - active_loop: trip_planning_form
+      - active_loop: null
+      - action: action_calculate_carbon
+      - action: action_recommend_options
+      - intent: thank_you
+      - action: utter_thank_you
+
+  - story: eco tour happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: eco_travel
+      - action: utter_eco_travel_info
+      - action: trip_planning_form
+      - active_loop: trip_planning_form
+      - active_loop: null
+      - action: action_calculate_carbon
+      - action: action_recommend_options
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: business trip happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: business_trip
+      - action: utter_business_trip_info
+      - action: trip_planning_form
+      - active_loop: trip_planning_form
+      - active_loop: null
+      - action: action_calculate_carbon
+      - action: action_recommend_options
+      - intent: thank_you
+      - action: utter_thank_you
+
+  - story: plan a trip then choose city break
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: plan_a_trip
+      - action: utter_ask_trip_type
+      - intent: city_break
+      - action: utter_city_break_info
+      - action: trip_planning_form
+      - active_loop: trip_planning_form
+      - active_loop: null
+      - action: action_calculate_carbon
+      - action: action_recommend_options
+
+  - story: carbon footprint standalone
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: carbon_footprint
+      - action: action_calculate_carbon
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: human handover after recommendation
+    steps:
+      - intent: plan_a_trip
+      - action: utter_ask_trip_type
+      - intent: city_break
+      - action: utter_city_break_info
+      - action: trip_planning_form
+      - active_loop: trip_planning_form
+      - active_loop: null
+      - action: action_calculate_carbon
+      - action: action_recommend_options
+      - intent: request_human_advisor
+      - action: action_human_handover
+
+  - story: out of scope then recover
+    steps:
+      - intent: out_of_scope
+      - action: utter_ask_rephrase
+      - intent: plan_a_trip
+      - action: utter_ask_trip_type
+
+  - story: greet and goodbye
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: goodbye
+      - action: utter_goodbye

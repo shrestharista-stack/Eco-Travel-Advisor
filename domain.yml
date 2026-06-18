@@ -1,0 +1,168 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirmation
+  - denial
+  - thank_you
+  - plan_a_trip
+  - city_break
+  - eco_travel
+  - business_trip
+  - request_human_advisor
+  - carbon_footprint
+  - out_of_scope
+
+entities:
+  - destination
+  - transportation
+
+slots:
+  trip_type:
+    type: categorical
+    values:
+      - city_break
+      - eco_travel
+      - business_trip
+    influence_conversation: true
+    mappings:
+    - type: from_intent
+      intent: city_break
+      value: city_break
+    - type: from_intent
+      intent: eco_travel
+      value: eco_travel
+    - type: from_intent
+      intent: business_trip
+      value: business_trip
+
+  destination:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: trip_planning_form
+        requested_slot: destination
+
+  travel_dates:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: trip_planning_form
+        requested_slot: travel_dates
+
+  budget:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: trip_planning_form
+        requested_slot: budget
+
+  sustainability_preference:
+    type: categorical
+    values:
+      - high
+      - medium
+      - low
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: trip_planning_form
+        requested_slot: sustainability_preference
+
+forms:
+  trip_planning_form:
+    required_slots:
+      - destination
+      - travel_dates
+      - budget
+      - sustainability_preference
+
+responses:
+  utter_greet:
+  - text: "Hello! Welcome to EcoTravel Advisor 🌿 Lets plan for your green travel."
+    buttons:
+    - title: "City Break"
+      payload: "/city_break"
+    - title: "Eco Travel"
+      payload: "/eco_travel"
+    - title: "Business Trip"
+      payload: "/business_trip"
+
+  utter_ask_trip_type:
+  - text: "What kind of trip are you looking forward to?"
+    buttons:
+    - title: "City Break"
+      payload: "/city_break"
+    - title: "Eco Travel"
+      payload: "/eco_travel"
+    - title: "Business Trip"
+      payload: "/business_trip"
+
+  utter_city_break_info:
+  - text: "That sounds exciting and less tiring. I can help you with your short city break travel. Let's get started."
+
+  utter_eco_travel_info:
+  - text: "I will help you to experience nature sustainably through low carbon emission travel plans! Let's get started."
+
+  utter_business_trip_info:
+  - text: "I'll help you plan a sustainable business trip that is relaxed and eco friendly. Let's get started."
+
+  utter_ask_destination:
+  - text: "Where would you like to go? "
+
+  utter_ask_travel_dates:
+  - text: "When are you planning to travel? "
+
+  utter_ask_budget:
+  - text: "What's your budget for this trip? Tell me in Euro."
+
+
+  utter_ask_sustainability_preference:
+  - text: "How important is sustainable travel for you?"
+    buttons:
+    - title: "Very important"
+      payload: "high"
+    - title: "Somewhat important"
+      payload: "medium"
+    - title: "Not a priority"
+      payload: "low"
+
+  utter_goodbye:
+  - text: "Bye! Have a nice and fun travel."
+
+  utter_thank_you:
+  - text: "You're welcome! I will be more than happy to help you again."
+
+  utter_iamabot:
+  - text: "I'm an Eco-travel AI assistant. I am ready to help you with your sustainable and green travel. 🌿"
+
+  utter_ask_rephrase:
+  - text: "Sorry, I am really not sure I understood that. But here's what I can help you with:"
+    buttons:
+    - title: "Plan a Trip"
+      payload: "/plan_a_trip"
+    - title: "Check Carbon Footprint"
+      payload: "/carbon_footprint"
+    - title: "Talk to an Advisor"
+      payload: "/request_human_advisor"
+
+  utter_handover_message:
+  - text: "Please wait for a moment. I will connect you with a human advisor."
+
+actions:
+  - action_recommend_options
+  - action_calculate_carbon
+  - action_human_handover
+  - action_default_fallback
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

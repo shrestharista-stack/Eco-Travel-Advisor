@@ -1,0 +1,6 @@
+[
+  {
+    "name": "transportation",
+    "pattern": "(\\bFlight\\b|\\bBus\\b|\\bTrain\\b|\\bCar\\b)"
+  }
+]

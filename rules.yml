@@ -1,0 +1,74 @@
+version: "3.1"
+
+rules:
+  - rule: greet
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: offer trip type when asked to plan
+    steps:
+      - intent: plan_a_trip
+      - action: utter_ask_trip_type
+
+  - rule: start form on city break
+    steps:
+      - intent: city_break
+      - action: utter_city_break_info
+      - action: trip_planning_form
+      - active_loop: trip_planning_form
+
+  - rule: start form on eco tour
+    steps:
+      - intent: eco_travel
+      - action: utter_eco_travel_info
+      - action: trip_planning_form
+      - active_loop: trip_planning_form
+
+  - rule: start form on business trip
+    steps:
+      - intent: business_trip
+      - action: utter_business_trip_info
+      - action: trip_planning_form
+      - active_loop: trip_planning_form
+
+  - rule: submit trip form
+    condition:
+      - active_loop: trip_planning_form
+    steps:
+      - action: trip_planning_form
+      - active_loop: null
+      - action: action_calculate_carbon
+      - action: action_recommend_options
+
+  - rule: transfer to human advisor
+    steps:
+      - intent: request_human_advisor
+      - action: action_human_handover
+
+  - rule: carbon footprint query
+    steps:
+      - intent: carbon_footprint
+      - action: action_calculate_carbon
+
+  - rule: respond to thank you
+    steps:
+      - intent: thank_you
+      - action: utter_thank_you
+
+  - rule: say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: out of scope
+    steps:
+      - intent: out_of_scope
+      - action: utter_ask_rephrase
+
+  - rule: nlu fallback
+    condition:
+      - active_loop: null
+    steps:
+      - intent: nlu_fallback
+      - action: action_default_fallback

@@ -1,0 +1,36 @@
+/usr/local/rasa_venv/lib/python3.8/site-packages/rasa/core/tracker_store.py:830: MovedIn20Warning: Deprecated API features detected! These feature(s) are not compatible with SQLAlchemy 2.0. To prevent incompatible upgrades prior to updating applications, ensure requirements files are pinned to "sqlalchemy<2.0". Set environment variable SQLALCHEMY_WARN_20=1 to show all deprecation warnings.  Set environment variable SQLALCHEMY_SILENCE_UBER_WARNING=1 to silence this message. (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+  Base: DeclarativeMeta = declarative_base()
+2026-06-18 23:04:38 INFO     rasa_sdk.endpoint  - Starting action endpoint server...
+Traceback (most recent call last):
+  File "/usr/local/rasa_venv/bin/rasa", line 8, in <module>
+    sys.exit(main())
+  File "/usr/local/rasa_venv/lib/python3.8/site-packages/rasa/__main__.py", line 119, in main
+    cmdline_arguments.func(cmdline_arguments)
+  File "/usr/local/rasa_venv/lib/python3.8/site-packages/rasa/cli/run.py", line 59, in run_actions
+    sdk.main_from_args(args)
+  File "/usr/local/rasa_venv/lib/python3.8/site-packages/rasa_sdk/__main__.py", line 18, in main_from_args
+    run(
+  File "/usr/local/rasa_venv/lib/python3.8/site-packages/rasa_sdk/endpoint.py", line 139, in run
+    app = create_app(
+  File "/usr/local/rasa_venv/lib/python3.8/site-packages/rasa_sdk/endpoint.py", line 82, in create_app
+    executor.register_package(action_package_name)
+  File "/usr/local/rasa_venv/lib/python3.8/site-packages/rasa_sdk/executor.py", line 262, in register_package
+    self._import_submodules(package)
+  File "/usr/local/rasa_venv/lib/python3.8/site-packages/rasa_sdk/executor.py", line 218, in _import_submodules
+    package = self._import_module(package)
+  File "/usr/local/rasa_venv/lib/python3.8/site-packages/rasa_sdk/executor.py", line 239, in _import_module
+    module = importlib.import_module(name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 839, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 976, in get_code
+  File "<frozen importlib._bootstrap_external>", line 906, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/content/actions.py", line 97
+    dispatcher.utter_message(text="I do not currently have flight info for that city. Here are some sample flights for your reference:"))
+                                                                                                                                        ^
+SyntaxError: unmatched ')'

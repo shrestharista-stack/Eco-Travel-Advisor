@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Eco BnB Paris",
+    "destination": "paris",
+    "stars": 4.5,
+    "eco_certification": "Green Key Eco Label",
+    "price_per_night": 80,
+    "sustainability_features": [
+      "solar panels",
+      "zero-waste kitchen",
+      "organic farmhouse"
+    ]
+  },
+  {
+    "name": "Conscious Hotel Amsterdam",
+    "destination": "amsterdam",
+    "stars": 4,
+    "eco_certification": "EU Ecolabel",
+    "price_per_night": 110,
+    "sustainability_features": [
+      "bicycle hire",
+      "rainwater harvesting",
+      "rooftop garden100% vegetarian menu"
+    ]
+  },
+  {
+    "name": "Green homes Barcelona",
+    "destination": "barcelona",
+    "stars": 4,
+    "eco_certification": "Eco Responsible Tourism",
+    "price_per_night": 145,
+    "sustainability_features": [
+      "100% renewable energy",
+      "organic restaurant",
+      "solar panels"
+    ]
+  },
+  {
+    "name": "Hotel Greenfarm London",
+    "destination": "London",
+    "stars": 3,
+    "eco_certification": "EU Ecolabel",
+    "price_per_night": 60,
+    "sustainability_features": [
+      "local produce only",
+      "vegan menu",
+      "rainwater harvesting"
+    ]
+  },
+  {
+    "name": "Green Pearls Rome",
+    "destination": "rome",
+    "stars": 4.5,
+    "eco_certification": "Sustainable Tourism Certified",
+    "price_per_night": 125,
+    "sustainability_features": [
+      "rainwater reuse and harvesting",
+      "solar electricity and water heater",
+      "organic compost farming"
+    ]
+  },
+  {
+    "name": "Green city Tokyo",
+    "destination": "tokyo",
+    "stars": 3.5,
+    "eco_certification": "Green Key",
+    "price_per_night": 70,
+    "sustainability_features": [
+      "rainwater reuse",
+      "solar panel",
+      "organic food"
+    ]
+  }
+]

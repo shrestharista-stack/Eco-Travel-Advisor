@@ -1,0 +1,188 @@
+version: "3.1"
+
+nlu:
+- lookup: transportation
+  examples: |
+    - Flight
+    - Bus
+    - Train
+    - Car
+
+- intent: greet
+  examples: |
+    - hi
+    - hey
+    - hello
+    - good morning
+    - good evening
+    - hey there
+    - hi there
+    - hello there
+    - hi, can you help me
+    - hello, I need some help
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - see you later
+    - thanks a lot
+    - thank you
+    - that is all I need
+    - talk to you later
+    - bye bye
+    - have a good day
+    - thanks, bye
+    - have a nice day
+
+- intent: affirmation
+  examples: |
+    - yes
+    - sure
+    - of course
+    - absolutely right
+    - sounds good
+    - that's right
+    - that's correct
+    - yes please
+    - definitely
+    - yes, that was helpful
+    - ok
+    - okay
+
+- intent: denial
+  examples: |
+    - no
+    - nope
+    - not really
+    - no thanks
+    - I don't think so
+    - no, that is not right
+    - never
+    - not now
+    - no way
+    - that is not right
+    - definitely not
+    - no, I'm good
+    - that was not helpful
+
+- intent: thank_you
+  examples: |
+    - thanks
+    - thank you
+    - thanks a lot
+    - thank you so much
+    - thanks, that was great
+    - you were a great help, thanks
+    - much appreciated
+    - cheers
+    - thanks for the help
+    - that's helpful, thanks
+    - I can't thank you enough
+
+- intent: plan_a_trip
+  examples: |
+    - I want to go on a trip to Paris
+    - I am planning for a vacation to Budapest
+    - can you please help me plan a trip to Berlin
+    - I want to travel to Athens
+    - how can I go to Zurich
+    - I'm thinking about a holiday at Barcelona
+    - help me plan my vacation to Rome
+    - I want to book a trip to Istanbul
+    - I'm looking for a trip to Prague
+    - can you help me plan my travel for Copenhagen
+    - I am looking forward to see Northen light in Helsinki
+    - help me organise a trip to London
+    - I need to plan some travel to Paris
+    - can you organize a trip for me to Budapest
+    - looking forward to go on a vacation to Zurich
+
+- intent: city_break
+  examples: |
+    - city break
+    - I want a city break
+    - a short city trip
+    - weekend city getaway
+    - I want to visit a city
+    - quick city trip
+    - urban break
+    - city break please
+    - let's do a city break
+    - a few days in a city
+
+- intent: eco_travel
+  examples: |
+    - eco tour
+    - I want an eco tour
+    - a nature tour
+    - eco-friendly tour
+    - rural eco tour
+    - I want to explore nature
+    - countryside eco tour
+    - sustainable nature trip
+    - eco tour please
+    - a green nature tour
+
+- intent: business_trip
+  examples: |
+    - business trip
+    - I need a business trip
+    - work travel
+    - I'm travelling for work
+    - a conference trip
+    - corporate trip
+    - business travel please
+    - sustainable business trip
+    - I have a work trip
+    - carbon neutral business trip
+
+- intent: carbon_footprint
+  examples: |
+    - what is the carbon footprint of [Car](transportation)?
+    - which mode of transport is the most efficient?
+    - which mode of transport emits the least carbin footprint?
+    - how much CO2 does [bus](transportation) produce?
+    - calculate the carbon emissions for each mode of transport?
+    - calculate the carbon emission of [Flight](transportation) for this trip?
+    - what are the emissions while using [bus](transportation)for this trip?
+    - is this the most sustainable way of travel?
+    - how green is this travelling in [Car](transportation)?
+    - what's the CO2 impact of travelling in [train](transportation)?
+    - what is the environmental impact when you go by [bus](transportation)?
+    - how much is the carbon cost of [Flight](transportation)?
+
+- intent: request_human_advisor
+  examples: |
+    - connect me to a human advisor
+    - I need to talk to a human advisor
+    - can I talk to a human
+    - can I speak to a real person
+    - you are not getting me, connect me with a real person
+    - I need human help
+    - transfer me to an advisor
+    - get me a human
+    - I want a real travel agent
+    - can a person help me
+    - can I have conversation with human
+    - can I talk to a real human
+
+
+- intent: out_of_scope
+  examples: |
+    - I want to buy a bag
+    - can you teach me German language
+    - set an alarm for tomorrow at 6 am
+    - what's the weather today
+    - tell me what happened in the city today
+    - play some music
+    - what time is it
+    - where is the world cup 2026 happening
+    - book me a taxi
+    - tell me latest news of AI
+    - find me a cafe nearby
+    - explain me solar system
+    - how many oceans are there
+    - how to treat migrain
+

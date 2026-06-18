@@ -1,0 +1,46 @@
+{
+  "flights": [
+    {
+      "airline": "RyanAir",
+      "route": "Berlin to Paris",
+      "price": 80,
+      "duration": "1h 25m",
+      "co2_kg": 32
+    },
+    {
+      "airline": "GreenJet",
+      "route": "Berlin to Amsterdam",
+      "price": 85,
+      "duration": "1h 15m",
+      "co2_kg": 28
+    },
+    {
+      "airline": "SkyBlue Airlines",
+      "route": "Berlin to Barcelona",
+      "price": 120,
+      "duration": "2h 00m",
+      "co2_kg": 52
+    },
+    {
+      "airline": "RyanAir",
+      "route": "Berlin to London",
+      "price": 100,
+      "duration": "1h 25m",
+      "co2_kg": 40
+    },
+    {
+      "airline": "Luftansa",
+      "route": "Berlin to Rome",
+      "price": 220,
+      "duration": "2h 30m",
+      "co2_kg": 120
+    },
+    {
+      "airline": "Luftansa",
+      "route": "Berlin to Tokyo",
+      "price": 700,
+      "duration": "10h 30m",
+      "co2_kg": 512
+    }
+  ]
+}

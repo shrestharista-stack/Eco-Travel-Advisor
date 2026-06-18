@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  rasa:
+    image: rasa/rasa:3.6.0
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./:/app
+    command: run --enable-api --cors "*"
+    depends_on:
+      - action_server
+
+  action_server:
+    build:
+      context: .
+      dockerfile: Dockerfile.actions
+    ports:
+      - "5055:5055"
+    env_file:
+      - .env

@@ -1,0 +1,28 @@
+[
+  {
+    "text": "what's the CO2 impact of travelling in train?",
+    "entities": [
+      {
+        "start": 39,
+        "end": 44,
+        "value": "train",
+        "entity": "transportation"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "how to treat migrain",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "transportation",
+        "start": 13,
+        "end": 20,
+        "confidence_entity": 0.9190194010734558,
+        "value": "migrain",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]
